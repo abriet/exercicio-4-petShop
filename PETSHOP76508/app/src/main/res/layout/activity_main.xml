@@ -20,51 +20,60 @@
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/radioGroup_bottom">
+        android:layout_marginBottom="@dimen/radioGroup_bottom"
+        android:id="@+id/rdGroup">
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/item1"
+            android:id="@+id/item1"
             />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/item2"/>
+            android:text="@string/item2"
+            android:id="@+id/item2"/>
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/item3"/>
+            android:text="@string/item3"
+            android:id="@+id/item3"/>
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/item4"/>
+            android:text="@string/item4"
+            android:id="@+id/item4"/>
 
     </RadioGroup>
 
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/femea"
         android:text="@string/femea" />
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/adestrado"
         android:text="@string/adestrado"/>
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/vacina"
         android:text="@string/vacina"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="calcular"
         android:text="@string/btn_calcular"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="R$ 00,00"
+        android:id="@+id/text_resultado"
         style="@style/texto_resultado"/>
 </LinearLayout>
