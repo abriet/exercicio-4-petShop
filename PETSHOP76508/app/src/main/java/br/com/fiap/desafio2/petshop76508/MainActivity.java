@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         rdGroup = (RadioGroup) findViewById(R.id.rdGroup);
         txtV = (TextView) findViewById(R.id.text_resultado);
 
@@ -26,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         cbAdestrado = (CheckBox) findViewById(R.id.adestrado);
         cbVacina = (CheckBox) findViewById(R.id.vacina);
 
+        if (txtV.getText().toString().isEmpty()){
+            txtV.setText(R.string.valor_sem_calcular);
+        }
     }
 
     public void calcular(View v){
@@ -33,29 +37,29 @@ public class MainActivity extends AppCompatActivity {
         double valor = 0;
             if (selected == R.id.item1){
                 valor = 800;
-                txtV.setText("R$ "+valor);
+                txtV.setText(getString(R.string.moeda_real)+valor);
             }else if (selected == R.id.item2){
                 valor = 750;
-                txtV.setText("R$ "+valor);
+                txtV.setText(getString(R.string.moeda_real)+valor);
             }else if (selected == R.id.item3){
                 valor = 700;
-                txtV.setText("R$ "+valor);
+                txtV.setText(getString(R.string.moeda_real)+valor);
             }else if (selected == R.id.item4){
                 valor = 800;
-                txtV.setText("R$ "+valor);
+                txtV.setText(getString(R.string.moeda_real)+valor);
             }
 
         if (cbFemea.isChecked()){
             valor = valor + 180;
-            txtV.setText("R$ "+valor);
+            txtV.setText(getString(R.string.moeda_real)+valor);
         }
         if (cbAdestrado.isChecked()){
             valor = valor + 400;
-            txtV.setText("R$ "+valor);
+            txtV.setText(getString(R.string.moeda_real)+valor);
         }
         if (cbVacina.isChecked()){
             valor = valor + 200;
-            txtV.setText("R$ "+valor);
+            txtV.setText(getString(R.string.moeda_real)+valor);
         }
 
 

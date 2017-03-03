@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/item1"
+            android:checked="true"
             android:id="@+id/item1"
             />
 
@@ -63,6 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/vacina"
+        android:checked="true"
         android:text="@string/vacina"/>
 
     <Button
