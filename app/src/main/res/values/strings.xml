@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pet Shop</string>
+    <string name="app_name">PET SHOP RM76508</string>
     <string name="cachorro">Escolhe qual cachoro deseja</string>
     <string name="item1">Border Colie R$ 800,00</string>
     <string name="item2">Pit Bull R$ 750,00</string>
@@ -11,4 +11,5 @@
     <string name="btn_calcular">CALCULAR</string>
     <string name="moeda_real">"R$ "</string>
     <string name="valor_sem_calcular">R$ 00,00</string>
+    <string name="formato_valor_double">#,###.00</string>
 </resources>

@@ -7,6 +7,8 @@ import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     RadioGroup rdGroup;
@@ -35,31 +37,32 @@ public class MainActivity extends AppCompatActivity {
     public void calcular(View v){
         int selected = rdGroup.getCheckedRadioButtonId();
         double valor = 0;
+        DecimalFormat formato = new DecimalFormat(getString(R.string.formato_valor_double));
             if (selected == R.id.item1){
                 valor = 800;
-                txtV.setText(getString(R.string.moeda_real)+valor);
+                txtV.setText(getString(R.string.moeda_real)+formato.format(valor));
             }else if (selected == R.id.item2){
                 valor = 750;
-                txtV.setText(getString(R.string.moeda_real)+valor);
+                txtV.setText(getString(R.string.moeda_real)+formato.format(valor));
             }else if (selected == R.id.item3){
                 valor = 700;
-                txtV.setText(getString(R.string.moeda_real)+valor);
+                txtV.setText(getString(R.string.moeda_real)+formato.format(valor));
             }else if (selected == R.id.item4){
                 valor = 800;
-                txtV.setText(getString(R.string.moeda_real)+valor);
+                txtV.setText(getString(R.string.moeda_real)+formato.format(valor));
             }
 
         if (cbFemea.isChecked()){
             valor = valor + 180;
-            txtV.setText(getString(R.string.moeda_real)+valor);
+            txtV.setText(getString(R.string.moeda_real)+formato.format(valor));
         }
         if (cbAdestrado.isChecked()){
             valor = valor + 400;
-            txtV.setText(getString(R.string.moeda_real)+valor);
+            txtV.setText(getString(R.string.moeda_real)+formato.format(valor));
         }
         if (cbVacina.isChecked()){
             valor = valor + 200;
-            txtV.setText(getString(R.string.moeda_real)+valor);
+            txtV.setText(getString(R.string.moeda_real)+formato.format(valor));
         }
 
 
