@@ -78,4 +78,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/text_resultado"
         style="@style/texto_resultado"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="carrinho"
+        android:visibility="invisible"
+        android:id="@+id/btn_carrinho"
+        android:text="@string/btn_carrinho"/>
 </LinearLayout>

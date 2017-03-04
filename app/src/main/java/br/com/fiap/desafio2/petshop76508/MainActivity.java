@@ -1,8 +1,10 @@
 package br.com.fiap.desafio2.petshop76508;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox cbFemea;
     CheckBox cbAdestrado;
     CheckBox cbVacina;
+    Button btnCarinho;
 
     // Declaração do DecimalFormat para 'personalizar' a exibição dos valores
     DecimalFormat formato;
@@ -39,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         //DecimalFormat - Usado para definir um padrão de exibição dos valores.
         formato = new DecimalFormat(getString(R.string.formato_valor_double));
 
+
+        btnCarinho = (Button) findViewById(R.id.btn_carrinho);
 
         //Validação para verificar se ainda não tiver efetuado um calculo, para exibir um valor zerado, assim não deixando um espaço em branco.
         if (txtV.getText().toString().isEmpty()){
@@ -83,6 +88,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
+        btnCarinho.setVisibility(View.VISIBLE);
     }
+
+
+    public void carrinho(View v){
+        Intent it = new Intent(this, Carrinho.class);
+        String valor_pagar = txtV.getText().toString();
+        it.putExtra("valor",valor_pagar);
+        startActivity(it);
+    }
+
 }
